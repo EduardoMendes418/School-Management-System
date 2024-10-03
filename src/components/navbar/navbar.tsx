@@ -15,13 +15,13 @@ const Navbar = () => {
                 </div>
                 <div className="bg-white rounded-full w-7 h-7 items-center justify-center cursor-pointer relative">
                     <Image src="/img/announcement.png" alt="" width={20} height={20} />
-                    <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-purple-500 text-white rounded-full text-xs">1</div>
+                    <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-green01 text-white rounded-full text-xs">1</div>
                 </div>
                 <div className="flex flex-col">
                     <span className="text-xs leading-3 font-medium">Eduardo Mendes</span>
                     <span className="text-[10px] text-gray-500 text-right">Admin</span>
                 </div>
-                    <Image src="/img/avatar.png" alt="" width={36} height={36} className="rounded-full" />
+                    <Image src="/img/avatar2.png" alt="" width={36} height={36} className="rounded-full" />
             </div>
         </div>
     )
