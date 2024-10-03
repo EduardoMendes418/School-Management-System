@@ -12,7 +12,7 @@
   font-weight: 600;
 }
 
-.react-calendar_title--active {
-  background-color: #c3ebfa !important;
+.react-calendar__tile--active {
+  background: #9AE6A5 !important;
   color: black !important;
 }
