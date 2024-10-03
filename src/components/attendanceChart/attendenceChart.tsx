@@ -8,38 +8,33 @@ const data = [
         name: 'Mon',
         present: 60,
         obsent: 40,
-
     },
     {
         name: 'Tue',
         present: 70,
         obsent: 50,
-
     },
     {
         name: 'Wed',
         present: 80,
         obsent: 60,
-
     },
     {
         name: 'Thu',
         present: 75,
         obsent: 65,
-
     },
     {
         name: 'Fri',
         present: 90,
         obsent: 45,
-
     },
 ];
 
 const AttendenceChart = () => {
     return (
         <div className='bg-white rounded-lg p-4 w-full h-full'>
-            <div className=''>
+            <div className='flex justify-between items-center'>
                 <h1 className="tex-lg font-semibold">Attendance</h1>
                 <Image src="/img/moreDark.png" alt="" width={20} height={20} />
             </div>
@@ -60,7 +55,6 @@ const AttendenceChart = () => {
                 </BarChart>
             </ResponsiveContainer>
         </div>
-
     )
 }
 
