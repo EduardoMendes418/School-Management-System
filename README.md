@@ -1,5 +1,7 @@
 # School Management Dashboard
 
+![admin](https://github.com/user-attachments/assets/738f9a04-90e0-4668-aeba-dc42ec4718f6)
+
 ## Getting Started
 
 First, run the development server:
