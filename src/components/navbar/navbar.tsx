@@ -8,10 +8,10 @@ const Navbar = () => {
                 <input type="text" placeholder="Search..." className="w-[200px] p-2 bg-transparent outline-none" />
             </div>
             <div className="flex  items-center gap-6 justify-end w-full">
-                <div className="bg-white rounded-full w-7 h-7 items-center justify-center cursor-pointer">
+                <div className="bg-white flex rounded-full w-7 h-7 items-center justify-center cursor-pointer">
                     <Image src="/img/message.png" alt="" width={20} height={20} />
                 </div>
-                <div className="bg-white rounded-full w-7 h-7 items-center justify-center cursor-pointer relative">
+                <div className="bg-white flex rounded-full w-7 h-7 items-center justify-center cursor-pointer relative">
                     <Image src="/img/announcement.png" alt="" width={20} height={20} />
                     <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center justify-center bg-green02 text-slate-500 rounded-full text-xs">2</div>
                 </div>
