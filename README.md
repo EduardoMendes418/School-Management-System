@@ -1,6 +1,6 @@
-# Environmental School System
+# School Management System
 
-![admin](https://github.com/user-attachments/assets/738f9a04-90e0-4668-aeba-dc42ec4718f6)
+![system](https://github.com/user-attachments/assets/d5c82cfc-6ca1-4214-b8ad-107b36e7fac6)
 
 ## Getting Started
 

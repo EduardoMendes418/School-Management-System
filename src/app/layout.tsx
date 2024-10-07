@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Environmental School System",
-  description: "Environmental School System",
+  title: "School Management System",
+  description: "School Management System",
 };
 
 export default function RootLayout({
