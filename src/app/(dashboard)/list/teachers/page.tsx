@@ -1,8 +1,59 @@
 import Pagination from "@/components/pagination/pagination";
+import Table from "@/components/table/table";
 import TableSearch from "@/components/tableSearch/tableSearch";
 import Image from "next/image";
 
+type Teacher = [
+  id: number,
+  teacherId: string,
+  name: string,
+  email: string,
+  photo: string,
+  phone: string,
+  subjects: string[],
+  classe: string[],
+  addres: string
+];
+
+const columns = [
+  {
+    header: "Info",
+    accessor: "info",
+  },
+  {
+    header: "Teacher ID",
+    accessor: "teacherId",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Subjects",
+    accessor: "subjectsId",
+    className: "hidden md:table-cell",
+  },
+  {
+    header: "Classes",
+    accessor: "classes",
+    className: "hidden lg:table-cell",
+  },
+  {
+    header: "Phone",
+    accessor: "phone",
+    className: "hidden lg:table-cell",
+  },
+  {
+    header: "Address",
+    accessor: "address",
+    className: "hidden lg:table-cell",
+  },
+  {
+    header: "Actions",
+    accessor: "action",
+  },
+];
+
 const TeacherListPage = () => {
+  const renderRow = (item: Teacher) => {};
+
   return (
     <div className="bg-white rounded-md flex-1 m-4 mt-0 p-4 ">
       <div className="flex items-center justify-between ">
@@ -22,6 +73,7 @@ const TeacherListPage = () => {
           </div>
         </div>
       </div>
+      <Table columns={columns} />
       <Pagination />
     </div>
   );
