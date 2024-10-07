@@ -1012,13 +1012,13 @@ export const calendarEvents = [
   {
     title: "Biology",
     allDay: false,
-    start: new Date(2024, 9, 10, 9, 0),
-    end: new Date(2024, 9, 10, 9, 45),
+    start: new Date(2024, 9, 5, 9, 0),
+    end: new Date(2024, 9, 5, 9, 45),
   },
   {
     title: "Physics",
     allDay: false,
-    start: new Date(2024, 9, 10, 11, 0),
-    end: new Date(2024, 9, 10, 11, 45),
+    start: new Date(2024, 9, 5, 11, 0),
+    end: new Date(2024, 9, 5, 11, 45),
   },
 ];

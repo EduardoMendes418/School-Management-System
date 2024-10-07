@@ -1,4 +1,4 @@
-# School Management Dashboard
+# Environmental School System
 
 ![admin](https://github.com/user-attachments/assets/738f9a04-90e0-4668-aeba-dc42ec4718f6)
 
