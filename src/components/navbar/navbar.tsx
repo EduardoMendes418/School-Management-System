@@ -19,7 +19,7 @@ const Navbar = () => {
                     <span className="text-xs leading-3 font-medium">Eduardo Mendes</span>
                     <span className="text-[10px] text-gray-500 text-right">Admin</span>
                 </div>
-                    <Image src="/img/avatar2.png" alt="" width={36} height={36} className="rounded-full" />
+                    <Image src="/img/avatar3.png" alt="" width={36} height={36} className="rounded-full" />
             </div>
         </div>
     )
