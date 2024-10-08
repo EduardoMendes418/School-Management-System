@@ -14,7 +14,7 @@ type Teacher = {
   phone: string,
   subjects: string[],
   classes: string[],
-  addres: string
+  address: string
 }
 
 const columns = [
@@ -43,8 +43,8 @@ const columns = [
     className: "hidden lg:table-cell",
   },
   {
-    header: "Addres",
-    accessor: "addres",
+    header: "Address",
+    accessor: "address",
     className: "hidden lg:table-cell",
   },
   {
@@ -68,7 +68,7 @@ const TeacherListPage = () => {
       <td className="hidden md:table-cell">{item.subjects.join(',')}</td>
       <td className="hidden md:table-cell">{item.classes.join(',')}</td>
       <td className="hidden md:table-cell">{item.phone}</td>
-      <td className="hidden md:table-cell">{item.addres}</td>
+      <td className="hidden md:table-cell">{item.address}</td>
       <td>
         <div className=" flex items-center gap-2">
           <Link href={`/list/teachers/${item.id}`}>
