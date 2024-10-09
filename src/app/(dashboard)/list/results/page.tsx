@@ -95,7 +95,7 @@ const ResultListPage = () => {
             </button>
             {role === "admin" && (
               <button className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100">
-                <Image src="/img/plus.png" alt="" width={14} height={14} />
+                <Image src="/img/plus2.png" alt="" width={14} height={14} />
               </button>
             )}
           </div>
