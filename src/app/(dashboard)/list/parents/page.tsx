@@ -56,13 +56,13 @@ const ParentListPage = () => {
       <td>
         <div className=" flex items-center gap-2">
           <Link href={`/list/teachers/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-100">
-              <Image src="/img/edit2.png" alt="" width={16} height={16} />
+            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100">
+              <Image src="/img/edit2.png" alt="" width={17} height={17} />
             </button>
           </Link>
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full  bg-gray-100">
-              <Image src="/img/delete.png" alt="" width={16} height={16} />
+            <button className="w-7 h-7 flex items-center justify-center rounded-full  bg-red-100">
+              <Image src="/img/delete.png" alt="" width={17} height={17} />
             </button>
           )}
         </div>
@@ -78,14 +78,14 @@ const ParentListPage = () => {
           <TableSearch />
           <div className=" flex items-center gap-4 self-end">
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100">
-              <Image src="/img/filter.png" alt="" width={14} height={14} />
+              <Image src="/img/filter.png" alt="" width={17} height={17} />
             </button>
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100">
-              <Image src="/img/sort.png" alt="" width={14} height={14} />
+              <Image src="/img/sort2.png" alt="" width={20} height={20} />
             </button>
             {role === "admin" && (
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100">
-              <Image src="/img/plus2.png" alt="" width={14} height={14} />
+              <Image src="/img/plus2.png" alt="" width={17} height={17} />
             </button>
             )}
           </div>
