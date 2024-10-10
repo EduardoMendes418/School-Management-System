@@ -1,3 +1,4 @@
+import BigCalendar from "@/components/bigCalender/bigCalender";
 import Image from "next/image";
 
 const SingleTeacherPage = () => {
@@ -41,7 +42,7 @@ const SingleTeacherPage = () => {
             </div>
           </div>
           <div className="flex-1 flex gap-4 justify-between flex-wrap">
-            <div className="">
+            <div className=" bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%] xl:w-[45%] 2xl:w-[48%]">
               <Image
                 src="/img/singleAttendance.png"
                 alt=""
@@ -54,7 +55,7 @@ const SingleTeacherPage = () => {
                 <span className="text-sm text-gray-400">Attendance</span>
               </div>
             </div>
-            <div className="">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%]  xl:w-[45%] 2xl:w-[48%]">
               <Image
                 src="/img/singleBranch.png"
                 alt=""
@@ -67,7 +68,7 @@ const SingleTeacherPage = () => {
                 <span className="text-sm text-gray-400">Branches</span>
               </div>
             </div>
-            <div className="">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%]  xl:w-[45%] 2xl:w-[48%]">
               <Image
                 src="/img/singleLesson.png"
                 alt=""
@@ -80,7 +81,7 @@ const SingleTeacherPage = () => {
                 <span className="text-sm text-gray-400">Lessons</span>
               </div>
             </div>
-            <div className="">
+            <div className="bg-white p-4 rounded-md flex gap-4 w-full md:w-[48%]  xl:w-[45%] 2xl:w-[48%]]">
               <Image
                 src="/img/singleClass.png"
                 alt=""
@@ -95,7 +96,10 @@ const SingleTeacherPage = () => {
             </div>
           </div>
         </div>
-        <div className="">Schedule</div>
+        <div className="mt-4 bg-white rounded-md p-4 h-[800px]">
+            <h1>Teacher&apos;s Schedule</h1>
+            <BigCalendar/>
+        </div>
       </div>
       <div className="w-full xl:w-1/3">r</div>
     </div>
