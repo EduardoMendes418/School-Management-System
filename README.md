@@ -6,7 +6,11 @@
 ![database](https://github.com/user-attachments/assets/d594f094-6bd4-48d4-8e1f-de117143f8c6)
 ![schemadate](https://github.com/user-attachments/assets/06d7625c-3daf-4de2-af57-de7131e863dc)
 
+## Cypress
+https://github.com/user-attachments/assets/e5d005d5-11ed-44b9-9006-8c6988c6bf33
+
 ## Getting Started basic
+
 npm install
 
 npm run dev
