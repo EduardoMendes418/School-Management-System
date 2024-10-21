@@ -119,10 +119,10 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <div className="mt-4 text-sm">
+    <div className="mt-4 text-sm" data-testid="cypress-list-menu">
       {menuItems.map((i) => (
-        <div className="flex flex-col gap-2" key={i.title}>
-          <span className="hidden lg:block text-gray-400 font-light my-2">
+        <div className="flex flex-col gap-2" key={i.title} data-testid={`menu-section-${i.title.toLowerCase()}`}>
+          <span className="hidden lg:block text-gray-400 font-light my-2" data-testid={`menu-title-${i.title.toLowerCase()}`}>
             {i.title}
           </span>
           {i.items.map((item) => {
@@ -132,9 +132,10 @@ const Menu = () => {
                   href={item.href}
                   key={item.label}
                   className="md:px-2 flex items-center justify-center lg:justify-start gap-2 text-gray-500 py-2 rounded-md hover:bg-slate-100"
+                  data-testid={`menu-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <Image src={item.icon} alt="" width={20} height={20} />
-                  <span className="hidden lg:block">{item.label}</span>
+                  <span className="hidden lg:block"  data-testid={`menu-label-${item.label.toLowerCase().replace(/\s+/g, '-')}`}>{item.label}</span>
                 </Link>
               );
             }
