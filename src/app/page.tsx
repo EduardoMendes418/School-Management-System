@@ -1,6 +1,6 @@
 const Homepage = () => {
   return (
-    <div className=''>Homepage</div>
+    <div className='' data-testid="cypress-home">HomePage</div>
   )
 }
 
