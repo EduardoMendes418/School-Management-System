@@ -11,11 +11,10 @@ describe("Menu Component", () => {
                 cy.window().then((win) => {
                     win.localStorage.setItem("role", role);
                 });
-
                 cy.reload();
             });
 
-            it(`should display the correct menu items for ${role}`, () => {
+            it(`Should display the correct menu items for ${role}`, () => {
                 cy.get('[data-testid="cypress-list-menu"]').within(() => {
                     if (["teacher"].includes(role)) {
                         cy.get('[data-testid="menu-link-teachers"]')
