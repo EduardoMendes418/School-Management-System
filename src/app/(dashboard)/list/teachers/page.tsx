@@ -8,6 +8,7 @@ import { ITEM_PER_PAGE } from "@/lib/settings";
 import { Class, Subject, Teacher } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
+import noAvatar from "@/../public/img/noAvatar.png";
 
 type TeacherList = Teacher & { subjects: Subject[] } & { classes: Class[] };
 
@@ -54,7 +55,7 @@ const renderRow = (item: TeacherList) => (
   >
     <td className="flex items-center gap-4 p-4">
       <Image
-        src={item.img || ""}
+        src={item.img || noAvatar}
         alt=""
         width={40}
         height={40}
@@ -128,7 +129,7 @@ const TeacherListPage = async ({
         </div>
       </div>
       <Table columns={columns} renderRow={renderRow} data={data} />
-      <Pagination page={p} count={count}/>
+      <Pagination page={p} count={count} />
     </div>
   );
 };
