@@ -5,9 +5,10 @@ import TableSearch from "@/components/tableSearch/tableSearch";
 import { role } from "@/lib/data";
 import prisma from "@/lib/prisma";
 import { ITEM_PER_PAGE } from "@/lib/settings";
-import { Class, Subject, Teacher } from "@prisma/client";
+import { Class, Prisma, Subject, Teacher } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
+import noAvatar from "@/../public/img/noAvatar.png";
 
 type TeacherList = Teacher & { subjects: Subject[] } & { classes: Class[] };
 
@@ -54,7 +55,7 @@ const renderRow = (item: TeacherList) => (
   >
     <td className="flex items-center gap-4 p-4">
       <Image
-        src={item.img || ""}
+        src={item.img || noAvatar}
         alt=""
         width={40}
         height={40}
@@ -98,8 +99,28 @@ const TeacherListPage = async ({
 
   const p = page ? parseInt(page) : 1;
 
+  //URL PARAMS CONDITION
+
+  const query: Prisma.TeacherWhereInput= {}
+
+  if (queryParams) {
+    for (const [key, value] of Object.entries(queryParams)) {
+      if (value !== undefined)
+        switch (key) {
+          case "classId": {
+            query.lessons = {
+              some: {
+                classId: parseInt(value),
+              }
+            }
+          }
+        }
+    }
+  }
+
   const [data, count] = await prisma.$transaction([
     prisma.teacher.findMany({
+      where:query,
       include: {
         subjects: true,
         classes: true,
@@ -107,7 +128,7 @@ const TeacherListPage = async ({
       take: ITEM_PER_PAGE,
       skip: ITEM_PER_PAGE * (p - 1),
     }),
-    prisma.teacher.count(),
+    prisma.teacher.count({where:query,}),
   ]);
 
   return (
@@ -128,7 +149,7 @@ const TeacherListPage = async ({
         </div>
       </div>
       <Table columns={columns} renderRow={renderRow} data={data} />
-      <Pagination page={p} count={count}/>
+      <Pagination page={p} count={count} />
     </div>
   );
 };
